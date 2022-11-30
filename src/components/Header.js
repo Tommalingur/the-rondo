@@ -44,6 +44,15 @@ export default function Header() {
           </ul>
         ) : null}
       </div>
+      <div className="Rondo">
+        <img
+          width={200}
+          height={50}
+          src={require("../assets/images/rondo_logo.jpg")}
+          className="RondoImg"
+          alt="rondo"
+        />
+      </div>
     </header>
   );
 }

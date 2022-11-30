@@ -1,46 +1,103 @@
 .Header {
     display: grid;
-    grid-template-areas: ". nav . logo .";
     margin-top: 20px;
+    width: 100vw;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas: 
+    ". nav nav nav logo rondo ."; 
+    grid-area: header;
 }
 
 .Nav {
+    display: grid, block;
+    justify-self: start;
     grid-area: nav;
-    display: grid;
-    grid-template-columns: repeat(4, auto);
-    align-items: center;
-    justify-items: center;
-    display: block;
 }
 
 .Logo {
-    grid-area: logo;
     justify-self: center;
+    grid-area: logo;
 }
 
 .DropDown {
     display: none;
 }
 
-@media (max-width: 530px) {
+.Rondo {
+    display: block;
+    justify-self: start;
+    grid-area: rondo;
+}
+
+@media (max-width: 1160px) {
     .Header {
-        grid-template-areas: ". drop . logo .";
+        grid-template-areas: ". drop . logo rondo rondo .";
+        width: 100vw;
+        grid-area: header;
     }
-    .Nav {
-        grid-template-rows: repeat(4, auto);
-        grid-template-columns: none;
-        align-content: center;
-        justify-content: center;
+
+    .Nav{
         display: none;
     }
+
+    .Rondo{
+        display: block;
+    }
+
+    .Logo{
+        justify-self: center;
+        grid-area: logo;
+    }
+
     .DropDown {
-        grid-area: drop;
         display: block;
         align-self: center;
         justify-self: center;
     }
 
+    .DropDiv {
+        grid-area: drop;
+        position: relative;
+    }
+    
+    .DropMenu {
+        position: absolute;
+    }
+
+}
+
+@media (max-width: 840px) {
+    .Header {
+        grid-template-areas: 
+        ". drop drop . logo logo ."
+        ". . rondo rondo rondo . .";
+        width: 100vw;
+        grid-gap: 10px;
+        grid-area: header;
+    }
+    .Nav {
+        display: none;
+    }
+    .DropDown {
+        display: block;
+        align-self: center;
+        justify-self: center;
+    }
+
+    .Rondo{
+        display: block;
+        justify-self: center;
+        grid-area: rondo;
+    }
+
+    .Logo{
+        justify-self: center;
+        grid-area: logo;
+    }
+
 .DropDiv {
+    grid-area: drop;
     position: relative;
 }
 

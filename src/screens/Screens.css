@@ -1,0 +1,60 @@
+@media (max-width: 1160px) {
+
+    .HomeGrid{
+        display: grid;
+        margin-top: 20px;
+        width: 100vw;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+        grid-template-rows: 2fr 1fr 1fr;
+        grid-template-areas: 
+        ". mainarticle mainarticle mainarticle mainarticle mainarticle ."
+        ". articlelist articlelist articlelist articlelist articlelist ."
+        ". newslist newslist newslist newslist newslist .";
+        grid-area: body;
+    }
+
+    .MainArticleContent{
+        display: grid;
+        grid-area: mainarticle;
+    }
+
+    .ArticleListContent{
+        display: grid;
+        grid-area: articlelist;
+    }
+
+    .NewsContent{
+        display: grid;
+        grid-area: newslist;
+    }
+}
+
+
+@media (max-width: 840px) {
+
+    .HomeGrid{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+        grid-template-areas: 
+        ". mainarticle mainarticle mainarticle mainarticle mainarticle ."
+        ". articlelist articlelist articlelist articlelist articlelist ."
+        ". newslist newslist newslist newslist newslist .";
+        grid-area: body;
+    }
+
+    .MainArticleContent{
+        display: grid;
+        grid-area: mainarticle;
+    }
+
+    .ArticleListContent{
+        display: grid;
+        grid-area: articlelist;
+    }
+
+    .NewsContent{
+        display: grid;
+        grid-area: newslist;
+    }
+}
